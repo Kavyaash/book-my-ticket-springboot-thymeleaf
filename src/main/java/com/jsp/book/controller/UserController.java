@@ -44,4 +44,8 @@ public class UserController {
 	public String login(LoginDto dto,RedirectAttributes attributes,HttpSession session) {
 		return userService.login(dto,attributes,session);
 	}
+	@GetMapping("/logout")
+	public String logout(HttpSession session,RedirectAttributes attributes) {
+		return userService.logout(session,attributes);
+	}
 }
